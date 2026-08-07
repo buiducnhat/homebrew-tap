@@ -1,25 +1,25 @@
 class Lazytools < Formula
   desc "A terminal utility belt — offline, keyboard-first. TUI plus CLI subcommands in one binary."
   homepage "https://github.com/buiducnhat/lazytools"
-  version "0.5.0"
+  version "0.5.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/buiducnhat/lazytools/releases/download/v0.5.0/lazytools-aarch64-apple-darwin.tar.xz"
-      sha256 "f1f7d9cad6e5b1dd26b6bcbcd5d681ebc35b39359d4036c197dce08a674f0f11"
+      url "https://github.com/buiducnhat/lazytools/releases/download/v0.5.1/lazytools-aarch64-apple-darwin.tar.xz"
+      sha256 "d29140c0e7160f11fcd3c3861c6758d074572defcc61810c1b5abbf069409cdf"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/buiducnhat/lazytools/releases/download/v0.5.0/lazytools-x86_64-apple-darwin.tar.xz"
-      sha256 "6900304d4f688a97cc347ed2d98db56a2b76796600c6fb4aa50216e569f1955a"
+      url "https://github.com/buiducnhat/lazytools/releases/download/v0.5.1/lazytools-x86_64-apple-darwin.tar.xz"
+      sha256 "0b39b6bbd09d8b3d538863ecc3526a98849026bcaff135203ab705bb4ca657e5"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/buiducnhat/lazytools/releases/download/v0.5.0/lazytools-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "e011ce8d0840ddc400458651e418ccfb6e8d8251c9c747cf6e68cc59eb82bc31"
+      url "https://github.com/buiducnhat/lazytools/releases/download/v0.5.1/lazytools-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "cf58577dbed8990c91a6191b17ec56baa191fbdd7800f951b45633b34b1bdbae"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/buiducnhat/lazytools/releases/download/v0.5.0/lazytools-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "9a33c56954c3f2ecc14b107e13da8f126900adf3b0e3dfe78487d5c0bec976ec"
+      url "https://github.com/buiducnhat/lazytools/releases/download/v0.5.1/lazytools-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9ed97ab9ae526348d45509f9be34c4f48d3a60e8cd5e470dcec8198a9b5d18d5"
     end
   end
   license "MIT"
