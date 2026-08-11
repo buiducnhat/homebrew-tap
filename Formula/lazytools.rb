@@ -1,25 +1,25 @@
 class Lazytools < Formula
   desc "A terminal utility belt — offline, keyboard-first. TUI plus CLI subcommands in one binary."
   homepage "https://github.com/buiducnhat/lazytools"
-  version "0.5.1"
+  version "0.5.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/buiducnhat/lazytools/releases/download/v0.5.1/lazytools-aarch64-apple-darwin.tar.xz"
-      sha256 "d29140c0e7160f11fcd3c3861c6758d074572defcc61810c1b5abbf069409cdf"
+      url "https://github.com/buiducnhat/lazytools/releases/download/v0.5.2/lazytools-aarch64-apple-darwin.tar.xz"
+      sha256 "8c5cb721958108479ec26c434da2bd1a40e3d903487ce70926898d5c603407bb"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/buiducnhat/lazytools/releases/download/v0.5.1/lazytools-x86_64-apple-darwin.tar.xz"
-      sha256 "0b39b6bbd09d8b3d538863ecc3526a98849026bcaff135203ab705bb4ca657e5"
+      url "https://github.com/buiducnhat/lazytools/releases/download/v0.5.2/lazytools-x86_64-apple-darwin.tar.xz"
+      sha256 "512ed5a5514966149714b5745adc22d35d7ab71df96e62f243a680c6d03fdf25"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/buiducnhat/lazytools/releases/download/v0.5.1/lazytools-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "cf58577dbed8990c91a6191b17ec56baa191fbdd7800f951b45633b34b1bdbae"
+      url "https://github.com/buiducnhat/lazytools/releases/download/v0.5.2/lazytools-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "d1d8e76f79b967153bde266d709c3948ed004d8e34a8fa5400489398b7a3306f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/buiducnhat/lazytools/releases/download/v0.5.1/lazytools-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "9ed97ab9ae526348d45509f9be34c4f48d3a60e8cd5e470dcec8198a9b5d18d5"
+      url "https://github.com/buiducnhat/lazytools/releases/download/v0.5.2/lazytools-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "9d4ccb6b77223df871dfd1918b872ccb85f823d714ac544a8fcb4fd69a3ae83a"
     end
   end
   license "MIT"
@@ -48,10 +48,18 @@ class Lazytools < Formula
   end
 
   def install
-    bin.install "lazytools" if OS.mac? && Hardware::CPU.arm?
-    bin.install "lazytools" if OS.mac? && Hardware::CPU.intel?
-    bin.install "lazytools" if OS.linux? && Hardware::CPU.arm?
-    bin.install "lazytools" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "lazytools"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "lazytools"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "lazytools"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "lazytools"
+    end
 
     install_binary_aliases!
 
